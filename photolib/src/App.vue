@@ -17,9 +17,15 @@
       links () {
         return [
           {title: 'Головна', url: '/'},
-          {title: 'Добавити фото', url: 'new-post'},
-          {title: 'Контакти', url: 'contacts'},
-          {title: 'Profile', url: 'user/:id'}
+          {title: 'Картинки', url: '/',
+            sublinks: [
+              {title: 'Авто', url: 'auto'},
+              {title: 'Пейзажі', url: 'views'},
+              {title: 'Море', url: 'see'},
+              {title: 'Тварини', url: 'animals'}
+            ]
+          },
+          {title: 'Добавити фото', url: 'new-post'}
         ]
       }
     },
