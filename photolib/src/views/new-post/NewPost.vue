@@ -1,7 +1,7 @@
 <template>
     <form class="form" @submit.prevent="onSubmit">
         <div class="input-group">
-            <img  class="image" :src="imageSrc">
+            <img  class="image" :src="image">
             <div @click="triggerUpload" class="button mt-2">Загрузити фото <i class="fa fa-download"></i></div>
         </div>
         <div class="input-group d-none">
@@ -36,7 +36,6 @@
         data() {
             return {
                 image: null,
-                imageSrc: '../assets/nophoto.png',
                 description: ''
             }
         },
@@ -57,9 +56,10 @@
             },
             onFileChange(event) {
                 const file = event.target.files[0]
+
                 const reader = new FileReader()
                 reader.onload = e => {
-                    this.imageSrc = reader.result
+                    this.image = reader.result
 
                 }
                 reader.readAsDataURL(file)
