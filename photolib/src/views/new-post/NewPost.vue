@@ -28,7 +28,7 @@
         <div class="input-group">
             <label for="description">Опис</label>
             <textarea
-                    v-model="description"
+                    v-model="caption"
                     class="input"
                     id="description"
                     placeholder="Добавте опис фото"
@@ -41,26 +41,30 @@
 </template>
 
 <script>
+    import posts from "./../../data/posts"
     export default {
         name: "NewPost",
         data() {
             return {
+                posts,
                 image: null,
                 category: '',
-                description: ''
+                caption: ''
             }
         },
         methods: {
             onSubmit() {
                 const newPost = {
-                    image: this.image,
-                    description: this.description,
-                    likes: 0
+                    username: "puppers",
+                    userImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/pug_personal.jpg",
+                    postImage: this.image,
+                    likes: 0,
+                    category: this.category,
+                    hasBeenLiked: false,
+                    caption: this.caption,
                 }
-                this.$store.dispatch('createPost', newPost)
-                    .then(() => {
-                        this.$router.push('/')
-                    })
+                this.posts.unshift(newPost)
+                this.$router.push('/')
             },
             triggerUpload() {
                 this.$refs.fileInput.click()
