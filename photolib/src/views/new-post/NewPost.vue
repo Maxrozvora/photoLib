@@ -16,6 +16,16 @@
                     name="image" required>
         </div>
         <div class="input-group">
+            <label for="category">Категорія</label>
+            <select v-model="category" class="input" name="category" id="category">
+                <option value="">Виберіть категорію</option>
+                <option value="Авто">Авто</option>
+                <option value="Пейзажі">Пейзажі</option>
+                <option value="Море">Море</option>
+                <option value="Тварини">Тварини</option>
+            </select>
+        </div>
+        <div class="input-group">
             <label for="description">Опис</label>
             <textarea
                     v-model="description"
@@ -36,6 +46,7 @@
         data() {
             return {
                 image: null,
+                category: '',
                 description: ''
             }
         },
