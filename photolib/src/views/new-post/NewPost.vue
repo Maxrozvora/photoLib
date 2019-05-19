@@ -26,18 +26,14 @@
             </textarea>
         </div>
 
-        <button class="button" type="submit"
-                :disabled="$v.$invalid"
-        >Опублікувати</button>
-        <span class="message" :class="{'hidden': !loading}">Йде створення поста</span>
+        <button class="button" type="submit">Опублікувати</button>
     </form>
 </template>
 
 <script>
-    import { required } from 'vuelidate/lib/validators'
     export default {
         name: "NewPost",
-        data () {
+        data() {
             return {
                 image: null,
                 imageSrc: '../assets/nophoto.png',
@@ -45,7 +41,7 @@
             }
         },
         methods: {
-            onSubmit () {
+            onSubmit() {
                 const newPost = {
                     image: this.image,
                     description: this.description,
@@ -55,11 +51,11 @@
                     .then(() => {
                         this.$router.push('/')
                     })
-        },
-            triggerUpload () {
+            },
+            triggerUpload() {
                 this.$refs.fileInput.click()
             },
-            onFileChange (event) {
+            onFileChange(event) {
                 const file = event.target.files[0]
                 const reader = new FileReader()
                 reader.onload = e => {
@@ -70,6 +66,7 @@
                 this.image = file
             }
         }
+    }
 </script>
 
 <style scoped lang="sass" src="./../../styles/sass/form.sass">
