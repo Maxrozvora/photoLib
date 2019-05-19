@@ -1,15 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <!--<slider-item-->
+            <!--:posts="getTopPosts"-->
+    <!--&gt;</slider-item>-->
+    <div class="post-wrapper">
+      <post-item
+              v-for="(post, index) in posts" :key="index"
+              :post="post"
+      ></post-item>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+  // @ is an alias to /src
+  import PostItem from '@/components/PostItem'
+  // import Slider from '@/components/Slider'
 
-export default {
-  name: 'home',
-  components: {
+  import posts from "../data/posts"
+  import filters from "../data/filters"
+
+  export default {
+    name: 'home',
+    data (){
+      return {
+        posts,
+        filters,
+      }
+    },
+    components: {
+      'post-item': PostItem,
+      // 'slider-item': Slider
+    }
   }
-}
 </script>
