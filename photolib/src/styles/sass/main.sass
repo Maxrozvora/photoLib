@@ -1,6 +1,7 @@
 @import "vars"
 @import "fonts"
 @import "libs"
+@import "grid"
 
 ::placeholder
   color: #666
@@ -51,11 +52,11 @@ a
 
 
 .post-wrapper
-  display: grid
   max-width: 1346px
-  margin: 0 auto
-  grid-template-columns: repeat(4, 1fr)
-  grid-gap: 20px
+  display: flex
+  flex-wrap: wrap
+  margin-right: -15px
+  margin-left: -15px
 
 /*==========  Desktop First  ==========*/
 
