@@ -25,7 +25,8 @@
               {title: 'Тварини', url: 'animals'}
             ]
           },
-          {title: 'Добавити фото', url: 'new-post'}
+          {title: 'Добавити фото', url: 'new-post'},
+          {title: 'Контакти', url: 'about'},
         ]
       }
     },
