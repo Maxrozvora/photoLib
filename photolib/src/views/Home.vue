@@ -18,6 +18,7 @@
 
         </hooper>
         <div class="container">
+            <h1 class="page-title">Найкраші фото</h1>
             <div class="post-wrapper">
                 <post-item
                         v-for="(post, index) in posts" :key="index"
@@ -58,6 +59,6 @@
         }
     }
 </script>
-<styles scoped lang="sass" src="./../styles/sass/slider.sass">
+<style lang="sass" src="./../styles/sass/slider.sass">
 
-</styles>
+</style>
