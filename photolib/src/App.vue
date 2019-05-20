@@ -19,10 +19,10 @@
           {title: 'Головна', url: '/'},
           {title: 'Картинки', url: '/',
             sublinks: [
-              {title: 'Авто', url: 'auto'},
-              {title: 'Пейзажі', url: 'views'},
-              {title: 'Море', url: 'see'},
-              {title: 'Тварини', url: 'animals'}
+              {title: 'Авто', url: '/category/auto'},
+              {title: 'Пейзажі', url: '/category/views'},
+              {title: 'Море', url: '/category/see'},
+              {title: 'Тварини', url: '/category/animals'}
             ]
           },
           {title: 'Добавити фото', url: 'new-post'},
