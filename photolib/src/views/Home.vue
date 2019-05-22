@@ -19,9 +19,13 @@
         </hooper>
         <div class="container">
             <h1 class="page-title">Найкраші фото</h1>
+            <div class="input-group">
+                <label>Пошук</label>
+                <input type="text" class="input" v-model="searchVal">
+            </div>
             <div class="post-wrapper">
                 <post-item
-                        v-for="(post, index) in posts" :key="index"
+                        v-for="(post, index) in searchPicture" :key="index"
                         :post="post"
                 ></post-item>
             </div>
@@ -45,11 +49,19 @@
             return {
                 posts,
                 filters,
+                searchVal: ''
             }
         },
         computed: {
             getSliderItem () {
                 return this.posts
+            },
+            searchPicture () {
+                const request = this.searchVal.toLowerCase()
+                return this.posts.filter(elem => {
+                    if (elem === '') return true
+                    else return elem.caption.toLowerCase().includes(request) || elem.category.toLowerCase().includes(request)
+                })
             }
         },
         components: {
@@ -59,6 +71,6 @@
         }
     }
 </script>
-<style lang="sass" src="./../styles/sass/slider.sass">
+<style lang="sass" src="./../styles/sass/home.sass">
 
 </style>
