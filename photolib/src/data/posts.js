@@ -1,5 +1,5 @@
 export default [
-    {
+    {   id: "1",
         username: "socleansofreshh",
         userImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/me_3.jpg",
         postImage:
@@ -10,7 +10,7 @@ export default [
         caption: "When you're ready for summer '18 ☀️",
         filter: "perpetua"
     },
-    {
+    {   id: "2",
         username: "djirdehh",
         userImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/me2.png",
         postImage:
@@ -21,7 +21,7 @@ export default [
         caption: "Views from the six...",
         filter: "clarendon"
     },
-    {
+    {   id: "3",
         username: "puppers",
         userImage:
             "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/pug_personal.jpg",
