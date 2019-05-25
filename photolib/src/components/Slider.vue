@@ -9,7 +9,13 @@
 
         <div class='slider js-slider'>
             <div class="slider__body" v-bind:style='{left: sliderOffsetLeft + "px"}'>
-                <div class="slider__slide js-slide" v-for='slide in posts' :style='"background-image: url(" + slide.postImage + ")"'></div>
+                <div class="slider__slide js-slide" v-for='slide in posts' :style='"background-image: url(" + slide.postImage + ")"'>
+                    <div class="slider__content">
+                        <div class="slider__title">{{slide.category}}</div>
+                        <div class="slider__text">{{slide.caption}}</div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
