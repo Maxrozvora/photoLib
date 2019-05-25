@@ -13,6 +13,24 @@
                         :post="post"
                 ></post-item>
             </div>
+            <div class="text-center">
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <span class="pagination__link pagination__link--arrow" title="Попередня сторінка">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+                    <li class="pagination__item">
+                        <span class="pagination__link pagination__link--arrow" title="Наступна сторінка">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
