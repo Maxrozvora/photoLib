@@ -109,9 +109,81 @@ export default [
         username: "Цзя Ми",
         postImage:
             "https://cameralabs.org/media/cameralabs/images/Tanya/_II_October/06.10/9red-beach-panjin-china.jpg",
-        likes: 33,
+        likes: 21,
         category: 'Пейзажі',
         hasBeenLiked: false,
         caption: "Красный берег, Паньцзинь, Китай."
+    },
+    {   id: "13",
+        username: "AutoLike",
+        postImage:
+            "https://www.kolesa.ru/uploads/2019/03/DSC_0124_cr-980x0-c-default.jpg",
+        likes: 27,
+        category: 'Авто',
+        hasBeenLiked: false,
+        caption: "Рождённый плавать: «Ягуар»"
+    },
+    {   id: "14",
+        username: "AutoLike",
+        postImage:
+            "https://www.kolesa.ru/uploads/2018/12/zaglavnaya-Tagaz-Aquila-1-935x600.jpg",
+        likes: 17,
+        category: 'Авто',
+        hasBeenLiked: false,
+        caption: "Tagaz Aquila"
+    },
+    {   id: "15",
+        username: "AutoLike",
+        postImage:
+            "https://www.kolesa.ru/uploads/2018/08/Jaguar-XKR-glavnaya-935x600.jpg",
+        likes: 26,
+        category: 'Авто',
+        hasBeenLiked: false,
+        caption: "Идет как аристократ, орет как хулиган"
+    },
+    {   id: "16",
+        username: "AutoLike",
+        postImage:
+            "https://www.kolesa.ru/uploads/2018/08/Jaguar-XKR-glavnaya-935x600.jpg",
+        likes: 35,
+        category: 'Авто',
+        hasBeenLiked: false,
+        caption: "Идет как аристократ, орет как хулиган"
+    },
+    {   id: "16",
+        username: "AutoLike",
+        postImage:
+            "https://www.kolesa.ru/uploads/2018/06/GAZ-6-1870x1200.jpg",
+        likes: 35,
+        category: 'Авто',
+        hasBeenLiked: false,
+        caption: "Почувствуй себя нэпманом: седан ГАЗ-6"
+    },
+    {   id: "17",
+        username: "AutoLike",
+        postImage:
+            "https://www.kolesa.ru/uploads/2018/05/Hyundai-Genesis-Coupe-glavnaya-1870x1200.jpg",
+        likes: 18,
+        category: 'Авто',
+        hasBeenLiked: false,
+        caption: "Hyundai Genesis Coupe"
+    },
+    {   id: "18",
+        username: "AutoLike",
+        postImage:
+            "https://www.kolesa.ru/uploads/2018/02/main-4-935x600.jpg",
+        likes: 32,
+        category: 'Авто',
+        hasBeenLiked: false,
+        caption: "ЛАЗ-42021"
+    },
+    {   id: "18",
+        username: "AutoLike",
+        postImage:
+            "https://www.kolesa.ru/uploads/2018/02/zaglaaavn-935x600.jpg",
+        likes: 36,
+        category: 'Авто',
+        hasBeenLiked: false,
+        caption: "Tesla Model 3"
     }
 ];
