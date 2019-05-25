@@ -11,8 +11,12 @@
             <div class="slider__body" v-bind:style='{left: sliderOffsetLeft + "px"}'>
                 <div class="slider__slide js-slide" v-for='slide in posts' :style='"background-image: url(" + slide.postImage + ")"'>
                     <div class="slider__content">
-                        <div class="slider__title">{{slide.category}}</div>
-                        <div class="slider__text">{{slide.caption}}</div>
+                        <div class="slider__title">Найкраще фото</div>
+                        <div class="slider__text">Автор:{{slide.username}}</div>
+                        <div class="slider__text">Розділ:{{slide.category}}</div>
+                        <div class="slider__text">Опис:{{slide.caption}}</div>
+                        <div class="slider__text">Лайків:{{slide.likes}}</div>
+                        <button class="button">Перейти</button>
                     </div>
 
                 </div>
