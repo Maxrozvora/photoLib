@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+        <slider :posts="posts"></slider>
         <div class="container">
             <h1 class="page-title">Найкраші фото</h1>
             <div class="input-group">
@@ -19,9 +20,7 @@
 <script>
     // @ is an alias to /src
     import PostItem from '@/components/PostItem'
-    // import Slider from '@/components/Slider'
-    import { Hooper, Slide } from 'hooper';
-    import 'hooper/dist/hooper.css';
+    import Slider from '@/components/Slider'
 
     import posts from "../data/posts"
     import filters from "../data/filters"
@@ -49,8 +48,7 @@
         },
         components: {
             'post-item': PostItem,
-            Hooper,
-            Slide
+            'slider': Slider
         }
     }
 </script>

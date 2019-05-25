@@ -1,12 +1,15 @@
 <template>
-    <div>
-        <button v-on:click='prevSlide'>Prev</button>
-        <button v-on:click='nextSlide'>Next</button>
-        <button v-on:click='openSlide(3)'>Open slide 3</button>
+    <div class="slider-wrapper">
+        <button v-on:click='prevSlide' class="arrow arrow-prev">
+            <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+        </button>
+        <button v-on:click='nextSlide' class="arrow arrow-next">
+            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+        </button>
 
         <div class='slider js-slider'>
             <div class="slider__body" v-bind:style='{left: sliderOffsetLeft + "px"}'>
-                <div class="slider__slide js-slide" v-for='slide in sliderList' :style='"background-image: url(" + slide.img + ")"'></div>
+                <div class="slider__slide js-slide" v-for='slide in posts' :style='"background-image: url(" + slide.postImage + ")"'></div>
             </div>
         </div>
     </div>
@@ -15,6 +18,9 @@
 <script>
     export default {
         name: "Slider",
+        props: {
+            posts: Array
+        },
         data () {
             return {
                 // Всего слайдов
