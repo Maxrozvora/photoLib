@@ -34,10 +34,23 @@ $width: 100%
     .fa
       font-size: 2em
     .fa-heart
-      color: #f06595
+      animation: heartbeat .5s
+      color: $accent
   &__caption
     font-weight: normal
     margin-left: 5px
+
+@keyframes heartbeat
+  0%
+    transform: scale(.75)
+  33%
+    transform: scale(1)
+  66%
+    transform: scale(.75)
+  100%
+    transform: scale(1)
+
+
 
 
 @media (min-width: 576px)
