@@ -177,6 +177,15 @@ export default [
         hasBeenLiked: false,
         caption: "ЛАЗ-42021"
     },
+    {   id: "19",
+        username: "AnimalPlanet",
+        postImage:
+            "https://o-prirode.ru/wp-content/uploads/2019/03/slide9.jpg",
+        likes: 27,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Тигр амурский"
+    },
     {   id: "18",
         username: "AutoLike",
         postImage:
@@ -185,5 +194,104 @@ export default [
         category: 'Авто',
         hasBeenLiked: false,
         caption: "Tesla Model 3"
+    },
+    {   id: "20",
+        username: "AnimalPlanet",
+        postImage:
+            "https://o-prirode.ru/wp-content/uploads/2018/10/1600x1000-03.jpg",
+        likes: 25,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Свинья Парнокопытное крупных размеров"
+    },
+    {   id: "21",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0004.jpg",
+        likes: 25,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Писец"
+    },
+    {   id: "22",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0002.jpg",
+        likes: 25,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Лев"
+    },
+    {   id: "23",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0015.jpg",
+        likes: 25,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Китовая акула"
+    },
+    {   id: "24",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0018.jpg",
+        likes: 23,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Котик на балконе"
+    },
+    {   id: "29",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0021.jpg",
+        likes: 21,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Красная панда"
+    },
+    {   id: "26",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0022.jpg",
+        likes: 30,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Черепаха в море"
+    },
+    {   id: "27",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0025.jpg",
+        likes: 34,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Медуза"
+    },
+    {   id: "28",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0027.jpg",
+        likes: 34,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Косуля"
+    },
+    {   id: "29",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0028.jpg",
+        likes: 26,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Морской ската на мелководии"
+    },
+    {   id: "30",
+        username: "AnimalPlanet",
+        postImage:
+            "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0033.jpg",
+        likes: 26,
+        category: 'Тварини',
+        hasBeenLiked: false,
+        caption: "Олень посреди леса"
     }
 ];
