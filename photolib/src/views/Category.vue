@@ -13,7 +13,7 @@
         <h1>Назва категории</h1>
         <div class="post-wrapper">
             <post-item
-                    v-for="(post, index) in posts" :key="index"
+                    v-for="(post, index) in getCategoryPost" :key="index"
                     :post="post"
             ></post-item>
         </div>
@@ -30,6 +30,17 @@
             return {
                 posts
             }
+        },
+        computed: {
+            getCategoryPost () {
+                return posts.filter(item => {
+                    return item.category === this.$route.params.id
+                })
+
+            }
+        },
+        created() {
+            console.log(this.getCategoryPost); // TODO console.log
         },
         components: {
             'post-item': PostItem

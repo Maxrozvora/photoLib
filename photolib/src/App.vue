@@ -18,9 +18,9 @@
           {title: 'Головна', url: '/'},
           {title: 'Картинки', url: '/',
             sublinks: [
-              {title: 'Авто', url: '/category/auto'},
-              {title: 'Пейзажі', url: '/category/views'},
-              {title: 'Тварини', url: '/category/animals'}
+              {title: 'Пейзажі', url: '/category/Пейзажі'},
+              {title: 'Авто', url: '/category/Авто'},
+              {title: 'Тварини', url: '/category/Тварини'}
             ]
           },
           {title: 'Добавити фото', url: 'new-post'},
