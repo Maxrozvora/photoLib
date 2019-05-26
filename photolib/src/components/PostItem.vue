@@ -3,8 +3,10 @@
             <div class="post__author">
                 <span class="post__author-name">{{post.username}}</span>
             </div>
+        <router-link :to="'post-page/' + post.id">
             <div class="post__image" :style='"background-image: url(" + post.postImage + ")"' :title="post.caption">
             </div>
+        </router-link>
             <div class="post__content">
                 <div class="post__heart">
                     <i class="fa"

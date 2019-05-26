@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Category from './views/Category'
+import PostPage from './views/PostPage'
 
 Vue.use(Router)
 
@@ -33,6 +34,10 @@ export default new Router({
     {
       path: '/category/:id',
       component: Category
+    },
+    {
+      path: '/post-page/:id',
+      component: PostPage
     }
   ]
 })
