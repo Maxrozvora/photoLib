@@ -16,7 +16,7 @@
             <div class="text-center">
                 <ul class="pagination">
                     <li class="pagination__item" v-for="page in pagination.pages">
-                        <a href="#" class="pagination__link" @click.prevent="setPage(page)">{{page}}</a>
+                        <a href="#" class="pagination__link" @click="setPage(page)">{{page}}</a>
                     </li>
                 </ul>
             </div>
