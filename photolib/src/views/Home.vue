@@ -9,25 +9,14 @@
             </div>
             <div class="post-wrapper">
                 <post-item
-                        v-for="(post, index) in searchPicture" :key="index"
+                        v-for="(post, index) in colected" :key="index"
                         :post="post"
                 ></post-item>
             </div>
             <div class="text-center">
                 <ul class="pagination">
-                    <li class="pagination__item">
-                        <span class="pagination__link pagination__link--arrow" title="Попередня сторінка">
-                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                        </span>
-                    </li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
-                    <li class="pagination__item">
-                        <span class="pagination__link pagination__link--arrow" title="Наступна сторінка">
-                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        </span>
+                    <li class="pagination__item" v-for="page in pagination.pages">
+                        <a href="#" class="pagination__link" @click.prevent="setPage(page)">{{page}}</a>
                     </li>
                 </ul>
             </div>
@@ -49,20 +38,48 @@
             return {
                 posts,
                 filters,
-                searchVal: ''
+                searchVal: '',
+                perPage: 12,
+                pagination: {}
             }
         },
         computed: {
-            getSliderItem () {
+            getSliderItem() {
                 return this.posts
             },
-            searchPicture () {
+            searchPicture() {
                 const request = this.searchVal.toLowerCase()
                 return this.posts.filter(elem => {
                     if (elem === '') return true
                     else return elem.caption.toLowerCase().includes(request) || elem.category.toLowerCase().includes(request)
                 })
+            },
+            colected() {
+                // collect pages from array
+                return this.paginate(this.searchPicture)
             }
+        },
+        methods: {
+            setPage(page) {
+                this.pagination = this.paginator(this.searchPicture.length, page)
+            },
+            paginate(data) {
+                return _.slice(data, this.pagination.startIndex, this.pagination.endIndex + 1)
+            },
+            paginator(totalItems, currentPage) {
+                const startIndex = (currentPage - 1) * this.perPage
+                const endIndex = Math.min(startIndex + this.perPage - 1, totalItems -1)
+                return {
+                    currentPage,
+                    startIndex,
+                    endIndex,
+                    pages: _.range(1, Math.ceil(totalItems / this.perPage) + 1)
+                }
+            }
+
+        },
+        created() {
+            this.setPage(1)
         },
         components: {
             'post-item': PostItem,
