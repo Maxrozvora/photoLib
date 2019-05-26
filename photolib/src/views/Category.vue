@@ -42,9 +42,6 @@
                 return this.getCategoryPost.slice(0, 1)[0]
             }
         },
-        created() {
-            console.log(this.getHeaderImage); // TODO console.log
-        },
         components: {
             'post-item': PostItem
         }
