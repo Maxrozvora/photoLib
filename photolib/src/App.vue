@@ -12,16 +12,14 @@
 
   export default {
     name: 'App',
-    computed: {
-
-      links () {
-        return [
+    data () {
+      return {
+        links:[
           {title: 'Головна', url: '/'},
           {title: 'Картинки', url: '/',
             sublinks: [
               {title: 'Авто', url: '/category/auto'},
               {title: 'Пейзажі', url: '/category/views'},
-              {title: 'Море', url: '/category/see'},
               {title: 'Тварини', url: '/category/animals'}
             ]
           },
