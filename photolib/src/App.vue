@@ -23,8 +23,8 @@
               {title: 'Тварини', url: '/category/Тварини'}
             ]
           },
-          {title: 'Добавити фото', url: 'new-post'},
-          {title: 'Контакти', url: 'about'},
+          {title: 'Добавити фото', url: '/new-post'},
+          {title: 'Контакти', url: '/about'},
         ]
       }
     },
