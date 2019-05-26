@@ -40,14 +40,7 @@
                 // Отступ тела со слайдами в контейнере
                 sliderOffsetLeft: 0,
                 // Шаг одного слайда = его длина
-                sliderOffsetStep: 0,
-                // Список изображений
-                sliderList: [
-                    {img: 'https://dummyimage.com/wsvga'},
-                    {img: 'https://dummyimage.com/wsvga'},
-                    {img: 'https://dummyimage.com/wsvga'},
-                    {img: 'https://dummyimage.com/wsvga'}
-                ]
+                sliderOffsetStep: 0
             }
         },
 
