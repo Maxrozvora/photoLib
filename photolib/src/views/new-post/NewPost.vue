@@ -21,7 +21,6 @@
                 <option value="">Виберіть категорію</option>
                 <option value="Авто">Авто</option>
                 <option value="Пейзажі">Пейзажі</option>
-                <option value="Море">Море</option>
                 <option value="Тварини">Тварини</option>
             </select>
         </div>
@@ -55,8 +54,8 @@
         methods: {
             onSubmit() {
                 const newPost = {
-                    username: "puppers",
-                    userImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/pug_personal.jpg",
+                    id: this.generateId,
+                    username: "Admin",
                     postImage: this.image,
                     likes: 0,
                     category: this.category,
@@ -79,6 +78,11 @@
                 }
                 reader.readAsDataURL(file)
                 this.image = file
+            }
+        },
+        computed: {
+            generateId() {
+                return Math.random().toString(36).substr(2, 16);
             }
         }
     }
