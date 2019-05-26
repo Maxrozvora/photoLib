@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <slider :posts="posts"></slider>
+        <slider :posts="getTopPost"></slider>
         <div class="container">
             <h1 class="page-title">Найкраші фото</h1>
             <div class="input-group">
@@ -9,7 +9,7 @@
             </div>
             <div class="post-wrapper">
                 <post-item
-                        v-for="(post, index) in colected" :key="index"
+                        v-for="(post, index) in collected" :key="index"
                         :post="post"
                 ></post-item>
             </div>
@@ -44,8 +44,11 @@
             }
         },
         computed: {
-            getSliderItem() {
-                return this.posts
+            getTopPost() {
+                const allPost = this.posts.sort((a,b) => {
+                    return b.likes - a.likes
+                })
+                return allPost.slice(0,3)
             },
             searchPicture() {
                 const request = this.searchVal.toLowerCase()
@@ -54,7 +57,7 @@
                     else return elem.caption.toLowerCase().includes(request) || elem.category.toLowerCase().includes(request)
                 })
             },
-            colected() {
+            collected() {
                 // collect pages from array
                 return this.paginate(this.searchPicture)
             }
