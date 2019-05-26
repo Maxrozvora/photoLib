@@ -3,13 +3,7 @@
             <div class="post__author">
                 <span class="post__author-name">{{post.username}}</span>
             </div>
-            <div class="post__image">
-                <img
-                        :src="post.postImage"
-                        :alt="post.caption"
-                        :class="post.filter"
-                        @dblclick="like"
-                        class="post__img">
+            <div class="post__image" :style='"background-image: url(" + post.postImage + ")"' :title="post.caption">
             </div>
             <div class="post__content">
                 <div class="post__heart">
