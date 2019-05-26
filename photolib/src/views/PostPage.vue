@@ -1,26 +1,39 @@
 <template>
     <div class="post-page">
-        <img :src="getPost.postImage" :alt="getPost.caption" class="post-page__img">
-        <div class="post-page__text">
-            <div class="post-page__likes">{{getPost.likes}}</div>
-            <div class="post-page__author">{{getPost.username}}</div>
-            <div class="post-page__category">{{getPost.category}}</div>
-            <div class="post-page__description">{{getPost.caption}}</div>
+        <div class="post">
+            <div class="post__author">
+                <span class="post__author-name">Автор: {{getPost.username}}</span>
+            </div>
+            <img class="post__image" :src="getPost.postImage" :alt="getPost.caption">
+            <div class="post__content">
+                <div class="post__heart">
+                    <i class="fa"
+                       :class="[getPost.hasBeenLiked ? 'fa-heart' : 'fa-heart-o']"
+                       @click="like"
+                    ></i>
+                    <span class="post__likes">{{getPost.likes}} подобається</span>
+                </div>
+                <div class="post__category"><b>Категорія:</b> <a href="" class="post__category-link">
+                    {{getPost.category}}</a></div>
+                <span class="post__author-name">{{getPost.username}}:</span>
+                <span class="post__caption">{{getPost.caption}}</span>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     import posts from "../data/posts"
+
     export default {
         name: "PostPage",
-        data () {
+        data() {
             return {
                 posts
             }
         },
         computed: {
-            getPost () {
+            getPost() {
                 const id = this.$route.params.id
                 const post = this.posts.filter(post => {
                     return post.id === id
@@ -28,12 +41,17 @@
                 return post[0]
             }
         },
-        created() {
-            console.log(this.getPost); // TODO console.log
+        methods: {
+            like() {
+                this.getPost.hasBeenLiked
+                    ? this.getPost.likes--
+                    : this.getPost.likes++;
+                this.getPost.hasBeenLiked = !this.getPost.hasBeenLiked;
+            }
         }
     }
 </script>
 
-<style scoped>
+<style scoped lang="sass" src="../styles/sass/post-page.sass">
 
 </style>
