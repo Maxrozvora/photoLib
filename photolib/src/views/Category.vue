@@ -8,13 +8,15 @@
                 Кількіть фото: {{getCategoryPost.length}}
             </div>
         </div>
-
-        <div class="post-wrapper">
-            <post-item
-                    v-for="(post, index) in getCategoryPost" :key="index"
-                    :post="post"
-            ></post-item>
+        <div class="container">
+            <div class="post-wrapper">
+                <post-item
+                        v-for="(post, index) in getCategoryPost" :key="index"
+                        :post="post"
+                ></post-item>
+            </div>
         </div>
+
     </div>
 </template>
 
