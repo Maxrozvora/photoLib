@@ -16,7 +16,7 @@
                         <div class="slider__text">Розділ:{{slide.category}}</div>
                         <div class="slider__text">Опис:{{slide.caption}}</div>
                         <div class="slider__text">Лайків:{{slide.likes}}</div>
-                        <button class="button">Перейти</button>
+                        <router-link class="button" :to="'/post-page/' + slide.id">Перейти</router-link>
                     </div>
 
                 </div>
