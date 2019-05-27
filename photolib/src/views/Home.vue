@@ -30,14 +30,12 @@
     import Slider from '@/components/Slider'
 
     import posts from "../data/posts"
-    import filters from "../data/filters"
 
     export default {
         name: 'home',
         data() {
             return {
                 posts,
-                filters,
                 searchVal: '',
                 perPage: 12,
                 pagination: {}
