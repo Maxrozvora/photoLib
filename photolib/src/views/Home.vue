@@ -4,8 +4,8 @@
         <div class="container">
             <h1 class="page-title">Найкраші фото</h1>
             <div class="input-group">
-                <label>Пошук</label>
-                <input type="text" class="input" v-model="searchVal">
+                <label for="searchVal">Пошук</label>
+                <input id="searchVal" type="text" class="input" v-model="searchVal">
             </div>
             <div class="post-wrapper">
                 <post-item
