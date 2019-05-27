@@ -15,7 +15,7 @@
 ></i>
                     <span class="post__likes">{{post.likes}} подобається</span>
                 </div>
-                <div class="post__category"><b>Категорія:</b> <a href="" class="post__category-link"> {{post.category}}</a></div>
+                <div class="post__category"><b>Категорія:</b> <span class="post__category-link"> {{post.category}}</span></div>
                 <span class="post__author-name">{{post.username}}:</span>
                 <span class="post__caption">{{post.caption}}</span>
             </div>
