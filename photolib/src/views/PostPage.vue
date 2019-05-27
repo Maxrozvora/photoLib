@@ -1,5 +1,20 @@
 <template>
     <div class="post-page">
+        <div class="post-header">
+                <div class="post-header__content">
+                    <div class="post-header__category"><b>Категорія:</b> <span class="post-header__category-link">
+                        {{getPost.category}}</span></div>
+                    <span class="post-header__author-name"><b>Автор:</b> {{getPost.username}}</span>
+                    <div class="post-header__caption"><b>Опис:</b> {{getPost.caption}}</div>
+                    <div class="post-header__heart">
+                        <i class="fa"
+                           :class="[getPost.hasBeenLiked ? 'fa-heart' : 'fa-heart-o']"
+                           @click="like"
+                        ></i>
+                        <span class="post-header__likes">{{getPost.likes}} подобається</span>
+                    </div>
+                </div>
+        </div>
         <nav class="breadcrumbs">
             <ul class="breadcrumbs-list">
                 <li class="breadcrumbs-list__item">
@@ -18,19 +33,7 @@
                 <span class="post__author-name">Автор: {{getPost.username}}</span>
             </div>
             <img class="post__image" :src="getPost.postImage" :alt="getPost.caption" @dblclick="like">
-            <div class="post__content">
-                <div class="post__heart">
-                    <i class="fa"
-                       :class="[getPost.hasBeenLiked ? 'fa-heart' : 'fa-heart-o']"
-                       @click="like"
-                    ></i>
-                    <span class="post__likes">{{getPost.likes}} подобається</span>
-                </div>
-                <div class="post__category"><b>Категорія:</b> <a href="" class="post__category-link">
-                    {{getPost.category}}</a></div>
-                <span class="post__author-name">{{getPost.username}}:</span>
-                <span class="post__caption">{{getPost.caption}}</span>
-            </div>
+
         </div>
     </div>
 </template>
