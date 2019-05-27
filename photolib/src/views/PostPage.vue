@@ -1,5 +1,18 @@
 <template>
     <div class="post-page">
+        <nav class="breadcrumbs">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-list__item">
+                    <router-link :to="'/'" class="breadcrumbs-list__link">Головна</router-link> <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumbs-list__item">
+                    <router-link :to="`/category/${getPost.category}`" class="breadcrumbs-list__link">{{getPost.category}}</router-link> <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumbs-list__item">
+                    <span class="breadcrumbs-list__link breadcrumbs-list__link--current">Картинка</span>
+                </li>
+            </ul>
+        </nav>
         <div class="post">
             <div class="post__author">
                 <span class="post__author-name">Автор: {{getPost.username}}</span>

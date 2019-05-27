@@ -8,6 +8,16 @@
                 Кількіть фото: {{getCategoryPost.length}}
             </div>
         </div>
+        <nav class="breadcrumbs">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-list__item">
+                    <router-link :to="'/'" class="breadcrumbs-list__link">Головна</router-link> <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumbs-list__item">
+                    <span class="breadcrumbs-list__link breadcrumbs-list__link--current">{{getHeaderImage.category}}</span>
+                </li>
+            </ul>
+        </nav>
         <div class="container">
             <div class="post-wrapper">
                 <post-item
