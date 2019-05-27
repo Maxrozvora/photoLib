@@ -3,7 +3,7 @@
         <router-link :to="'/'" tag="a" class="logo logo-litera">PhotoLib</router-link>
         <div @click="toggleMobileNav" class="mobile-menu-button"><i class="fa fa-bars"></i> Меню</div>
         <nav class="main-menu top-menu" :class="{active: toggleNav}">
-            <ul class="main-menu__list">
+            <ul class="main-menu__list" @click="hideNavBar">
                 <router-link
                         v-for="link of links"
                         :key="link.title"
@@ -42,6 +42,9 @@
         methods: {
             toggleMobileNav () {
                 this.toggleNav = !this.toggleNav
+            },
+            hideNavBar () {
+                this.toggleNav = false
             }
         }
     }
