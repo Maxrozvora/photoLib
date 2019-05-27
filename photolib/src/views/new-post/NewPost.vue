@@ -17,7 +17,7 @@
         </div>
         <div class="input-group">
             <label for="category">Категорія</label>
-            <select v-model="category" class="input" name="category" id="category">
+            <select v-model="category" class="input" name="category" id="category" required>
                 <option value="">Виберіть категорію</option>
                 <option value="Авто">Авто</option>
                 <option value="Пейзажі">Пейзажі</option>
@@ -30,6 +30,7 @@
                     v-model="caption"
                     class="input"
                     id="description"
+                    required
                     placeholder="Добавте опис фото"
                     name="description">
             </textarea>
