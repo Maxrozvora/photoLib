@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Category from './views/Category'
+import About from './views/About'
 import PostPage from './views/PostPage'
 
 Vue.use(Router)
@@ -13,15 +14,18 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Головна сторінка - PhotoLib'
+      }
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: About,
+      meta: {
+        title: 'Про сайт - PhotoLib'
+      }
     },
     {
       path: '/new-post',
@@ -29,15 +33,26 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/new-post/NewPost.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/new-post/NewPost.vue'),
+      meta: {
+        title: 'Добавити фото'
+      }
     },
     {
       path: '/category/:id',
-      component: Category
+      component: Category,
+      meta: {
+        title: 'Розділ категорії - PhotoLib'
+      }
     },
     {
       path: '/post-page/:id',
-      component: PostPage
+      component: PostPage,
+      meta: {
+        title: 'Перегляд фотографії - PhotoLib'
+      }
     }
-  ]
+  ],
 })
+
+
