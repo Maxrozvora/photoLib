@@ -78,7 +78,6 @@
 
                 }
                 reader.readAsDataURL(file)
-                this.image = file
             }
         },
         computed: {
