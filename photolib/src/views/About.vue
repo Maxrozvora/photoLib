@@ -4,8 +4,8 @@
       <div class="about-header">
         <h1>Контакты</h1>
         <ul class="contact">
-          <li class="contact__item"><b>Телефон:</b> +380982767757</li>
-          <li class="contact__item"><b>Email:</b> +admin@photolib.com</li>
+          <li class="contact__item"><b>Телефон:</b> <a class="contact__link" href="tel:380982767757">+380982767757</a></li>
+          <li class="contact__item"><b>Email:</b> <a class="contact__link" href="mailto:admin@photolib.com">admin@photolib.com</a></li>
           <li class="contact__item"><b>Адреса:</b> м.Вінниця вул. Космонавтів 5, кв.40</li>
         </ul>
       </div>
