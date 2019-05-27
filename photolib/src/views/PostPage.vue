@@ -4,7 +4,7 @@
             <div class="post__author">
                 <span class="post__author-name">Автор: {{getPost.username}}</span>
             </div>
-            <img class="post__image" :src="getPost.postImage" :alt="getPost.caption">
+            <img class="post__image" :src="getPost.postImage" :alt="getPost.caption" @dblclick="like">
             <div class="post__content">
                 <div class="post__heart">
                     <i class="fa"
