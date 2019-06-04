@@ -49,7 +49,7 @@
                 })
             },
             getHeaderImage() {
-                return this.getCategoryPost.slice(0, 1)[0]
+                return this.getCategoryPost[0]
             }
         },
         components: {
