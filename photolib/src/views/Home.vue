@@ -31,6 +31,8 @@
 
     import posts from "../data/posts"
 
+    import _ from 'lodash'
+
     export default {
         name: 'home',
         data() {
