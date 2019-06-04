@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Category from './views/Category'
 import About from './views/About'
 import PostPage from './views/PostPage'
+import NoFound from './views/NoFound'
 
 Vue.use(Router)
 
@@ -50,6 +51,13 @@ export default new Router({
       component: PostPage,
       meta: {
         title: 'Перегляд фотографії - PhotoLib'
+      }
+    },
+    {
+      path: '*',
+      component: NoFound,
+      meta: {
+        title: '404 Сторінка не знайдена - PhotoLib'
       }
     }
   ],
