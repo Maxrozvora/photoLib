@@ -36,18 +36,15 @@
     margin-right: -4px
     border-right: 1px solid #545454
     position: relative
-    &.active
-      a
-        color: #ffffff
-        background-color: lighten($dark, 5)
-        border-bottom: 1px solid #545454
-    &:hover
-      a
-        color: #ffffff
-        background-color: lighten($dark, 8)
     &:hover
       .main-menu__sub-menu
         display: block
+  &__link
+    //background-color: $dark
+    &:hover
+      color: #ffffff
+      background-color: lighten($dark, 8)
+
   &__item:first-child
     border-left: 1px solid #545454
   &__link
@@ -72,6 +69,7 @@
     border-right: 1px solid #545454
     border-left: 1px solid #545454
     border-bottom: 1px solid #545454
+    background-color: $dark
 
 .search-wrap
   .search
@@ -151,6 +149,7 @@
       z-index: 20
     &__item-sub
       margin: 0
+      background-color: lighten($dark, 3)
     &__sub-menu
       position: static
       display: block
