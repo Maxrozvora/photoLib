@@ -51,10 +51,10 @@
         computed: {
             getPost() {
                 const id = this.$route.params.id
-                const post = this.posts.filter(post => {
+                const postIndex = this.posts.findIndex(post => {
                     return post.id === id
                 })
-                return post[0]
+                return this.posts[postIndex]
             }
         },
         methods: {
