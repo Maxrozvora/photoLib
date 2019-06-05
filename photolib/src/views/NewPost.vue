@@ -36,7 +36,7 @@
             </textarea>
         </div>
 
-        <button class="button" type="submit">Опублікувати</button>
+        <button class="button" type="submit" :disabled="validateImage">Опублікувати</button>
     </form>
 </template>
 
@@ -83,6 +83,14 @@
         computed: {
             generateId() {
                 return Math.random().toString(36).substr(2, 16);
+            },
+
+            validateImage() {
+                if (this.image === null || this.image === 'undefined') {
+                    return true
+                }
+                    return false
+
             }
         }
     }
