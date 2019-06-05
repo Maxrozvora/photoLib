@@ -5,7 +5,7 @@
             <h1 class="page-title">Найкраші фото</h1>
             <div class="input-group">
                 <label for="searchVal">Пошук</label>
-                <input id="searchVal" type="text" class="input" v-model="searchVal">
+                <input id="searchVal" type="text" class="input" v-model="searchVal" @input="setPage(1)">
             </div>
             <div class="post-wrapper">
                 <post-item
