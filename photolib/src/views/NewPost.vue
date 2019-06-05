@@ -63,7 +63,7 @@
                     hasBeenLiked: false,
                     caption: this.caption,
                 }
-                this.posts.unshift(newPost)
+                this.posts.push(newPost)
                 this.$router.push('/')
             },
             triggerUpload() {
