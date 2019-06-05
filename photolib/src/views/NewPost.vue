@@ -73,7 +73,7 @@
                 const file = event.target.files[0]
 
                 const reader = new FileReader()
-                reader.onload = e => {
+                reader.onload = () => {
                     this.image = reader.result
 
                 }
