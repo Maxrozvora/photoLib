@@ -41,7 +41,7 @@
 </template>
 
 <script>
-    import posts from "./../../data/posts"
+    import posts from "../data/posts"
     export default {
         name: "NewPost",
         data() {
@@ -88,6 +88,6 @@
     }
 </script>
 
-<style scoped lang="sass" src="./../../styles/sass/form.sass">
+<style scoped lang="sass" src="../styles/sass/form.sass">
 
 </style>
