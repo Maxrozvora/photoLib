@@ -4,7 +4,6 @@
         <p class="no-found__text">
             Упс! Щось пішло не так. Поверніться на головну сторінку
         </p>
-        <img src="photolib/src/assets/404.svg" alt="Page no found" class="no-found__img">
     </div>
 </template>
 
