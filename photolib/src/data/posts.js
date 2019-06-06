@@ -4,7 +4,7 @@ export default [
         userImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/me_3.jpg",
         postImage:
             "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/tropical_beach.jpg",
-        likes: 36,
+        likes: 20,
         category: 'Пейзажі',
         hasBeenLiked: false,
         caption: "When you're ready for summer '18 ☀️",
@@ -27,7 +27,7 @@ export default [
             "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/pug_personal.jpg",
         postImage:
             "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/puppers.jpg",
-        likes: 49,
+        likes: 25,
         category: 'Тварини',
         hasBeenLiked: false,
         caption: "Current mood 🐶",
@@ -100,7 +100,7 @@ export default [
         username: "Христиан Ортис",
         postImage:
             "https://cameralabs.org/media/cameralabs/images/Tanya/_II_October/06.10/8hidden-mountain-village-in-china.jpg",
-        likes: 33,
+        likes: 43,
         category: 'Пейзажі',
         hasBeenLiked: false,
         caption: "Скрытая горная деревня на юге Китая."
@@ -262,7 +262,7 @@ export default [
         username: "AnimalPlanet",
         postImage:
             "https://fishki.net/picsw/042013/18/post/zhivotnie/zhivotnie-0025.jpg",
-        likes: 34,
+        likes: 50,
         category: 'Тварини',
         hasBeenLiked: false,
         caption: "Медуза"
