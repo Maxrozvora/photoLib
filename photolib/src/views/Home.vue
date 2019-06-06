@@ -54,7 +54,7 @@
                 const request = this.searchVal.toLowerCase()
                 return this.posts.filter(elem => {
                     if (elem === '') return true
-                    else return elem.caption.toLowerCase().includes(request) || elem.category.toLowerCase().includes(request)
+                    else return elem.caption.toLowerCase().includes(request) || elem.category.toLowerCase().includes(request) || elem.username.toLowerCase().includes(request)
                 })
             },
             collected() {
